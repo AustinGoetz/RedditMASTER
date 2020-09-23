@@ -29,6 +29,7 @@ class PostListTableViewController: UITableViewController {
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
+                    // Just print at first until we create the alert controller
                     self.presentErrorToUser(localizedError: error)
                     print(error.localizedDescription)
                 }

@@ -12,10 +12,10 @@ struct TopLevelDictionary: Decodable {
 }
 
 struct SecondLevelDictionary: Decodable {
-    let children: [ThirdLevelDictionary]
+    let children: [ThirdLevelObject]
 }
 
-struct ThirdLevelDictionary: Decodable {
+struct ThirdLevelObject: Decodable {
     let data: Post
 }
 

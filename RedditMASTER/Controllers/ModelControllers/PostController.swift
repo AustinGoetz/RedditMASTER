@@ -52,7 +52,7 @@ class PostController {
     }
     
     static func fetchThumbnailFor(post: Post, completion: @escaping (Result<UIImage, PostError>) -> Void) {
-        guard let url = post.thumbnail else { return }
+        guard let url = post.thumbnail else { return completion(.failure(.invalidURL)) }
         print(url)
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in

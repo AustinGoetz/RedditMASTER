@@ -23,7 +23,7 @@ enum PostError: LocalizedError {
         case .noData:
             return "There was no data found"
         case .thrownImageError(let error):
-            return "There was an error with an image: \(error.localizedDescription)"
+            return "Could not display thumbnail image: \(error.localizedDescription)"
         case .unableToDecode:
             return "There was an error when trying to load the data"
         }

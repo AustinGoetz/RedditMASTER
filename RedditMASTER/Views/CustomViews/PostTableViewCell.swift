@@ -8,6 +8,7 @@
 import UIKit
 
 // MARK: - Protocol
+// Don't do this until you have done the alert controller
 protocol PresentErrorToUserDelegate: AnyObject {
     func presentError(error: LocalizedError)
 }
@@ -32,6 +33,7 @@ class PostTableViewCell: UITableViewCell {
         guard let post = post else { return }
         titleLabel.text = post.title
         upvoteLabel.text = "Upvotes: \(post.ups)"
+        // We do this because we are going to fetch the image right from this cell. As we scroll it will reset the image and not have the old image showing up
         thumbnailImageView.image = nil
         
         PostController.fetchThumbnailFor(post: post) { (result) in
@@ -42,6 +44,7 @@ class PostTableViewCell: UITableViewCell {
                         self.thumbnailImageView.image = image
                     }
                 case .failure(let error):
+                    // Just print at first until we define the delegate and
                     self.delegate?.presentError(error: error)
                     print(error.localizedDescription)
                 }
