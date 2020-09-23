@@ -17,6 +17,7 @@
 		2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854A1251AD0CB007DA7FB /* PostError.swift */; };
 		2A8854AF251AE289007DA7FB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854AE251AE289007DA7FB /* PostTableViewCell.swift */; };
 		2A8854B6251AE432007DA7FB /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854B5251AE432007DA7FB /* PostListTableViewController.swift */; };
+		2A8854BD251AE5E8007DA7FB /* ErrorActionSheetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854BC251AE5E8007DA7FB /* ErrorActionSheetExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2A8854A1251AD0CB007DA7FB /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		2A8854AE251AE289007DA7FB /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		2A8854B5251AE432007DA7FB /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		2A8854BC251AE5E8007DA7FB /* ErrorActionSheetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorActionSheetExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2A8854A1251AD0CB007DA7FB /* PostError.swift */,
+				2A8854BC251AE5E8007DA7FB /* ErrorActionSheetExtension.swift */,
 			);
 			path = HelpersAndExtensions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8854BD251AE5E8007DA7FB /* ErrorActionSheetExtension.swift in Sources */,
 				2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */,
 				2A88549B251AC806007DA7FB /* Post.swift in Sources */,
 				2A8854B6251AE432007DA7FB /* PostListTableViewController.swift in Sources */,
