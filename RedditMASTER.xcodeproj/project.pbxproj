@@ -15,6 +15,8 @@
 		2A88549B251AC806007DA7FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88549A251AC806007DA7FB /* Post.swift */; };
 		2A88549E251AD00A007DA7FB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88549D251AD00A007DA7FB /* PostController.swift */; };
 		2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854A1251AD0CB007DA7FB /* PostError.swift */; };
+		2A8854AF251AE289007DA7FB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854AE251AE289007DA7FB /* PostTableViewCell.swift */; };
+		2A8854B6251AE432007DA7FB /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854B5251AE432007DA7FB /* PostListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		2A88549A251AC806007DA7FB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2A88549D251AD00A007DA7FB /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		2A8854A1251AD0CB007DA7FB /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
+		2A8854AE251AE289007DA7FB /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2A8854B5251AE432007DA7FB /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		2A885494251AC48D007DA7FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A8854AD251AE26E007DA7FB /* CustomViews */,
 				2A885498251AC4AD007DA7FB /* Storyboards */,
 			);
 			path = Views;
@@ -109,6 +114,7 @@
 		2A885496251AC498007DA7FB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A8854B5251AE432007DA7FB /* PostListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +141,14 @@
 				2A8854A1251AD0CB007DA7FB /* PostError.swift */,
 			);
 			path = HelpersAndExtensions;
+			sourceTree = "<group>";
+		};
+		2A8854AD251AE26E007DA7FB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2A8854AE251AE289007DA7FB /* PostTableViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +223,11 @@
 			files = (
 				2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */,
 				2A88549B251AC806007DA7FB /* Post.swift in Sources */,
+				2A8854B6251AE432007DA7FB /* PostListTableViewController.swift in Sources */,
 				2A88549E251AD00A007DA7FB /* PostController.swift in Sources */,
 				2A88547D251AB84A007DA7FB /* AppDelegate.swift in Sources */,
 				2A88547F251AB84A007DA7FB /* SceneDelegate.swift in Sources */,
+				2A8854AF251AE289007DA7FB /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
