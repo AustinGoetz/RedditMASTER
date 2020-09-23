@@ -13,6 +13,8 @@
 		2A885486251AB84C007DA7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A885485251AB84C007DA7FB /* Assets.xcassets */; };
 		2A885489251AB84C007DA7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A885487251AB84C007DA7FB /* LaunchScreen.storyboard */; };
 		2A88549B251AC806007DA7FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88549A251AC806007DA7FB /* Post.swift */; };
+		2A88549E251AD00A007DA7FB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88549D251AD00A007DA7FB /* PostController.swift */; };
+		2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8854A1251AD0CB007DA7FB /* PostError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2A885488251AB84C007DA7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A88548A251AB84C007DA7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A88549A251AC806007DA7FB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2A88549D251AD00A007DA7FB /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		2A8854A1251AD0CB007DA7FB /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 				2A885495251AC490007DA7FB /* Models */,
 				2A885494251AC48D007DA7FB /* Views */,
 				2A885493251AC488007DA7FB /* Controllers */,
+				2A8854A0251AD0BA007DA7FB /* HelpersAndExtensions */,
 				2A885491251AC475007DA7FB /* Resources */,
 			);
 			path = RedditMASTER;
@@ -111,6 +116,7 @@
 		2A885497251AC49F007DA7FB /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A88549D251AD00A007DA7FB /* PostController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -121,6 +127,14 @@
 				2A885482251AB84A007DA7FB /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2A8854A0251AD0BA007DA7FB /* HelpersAndExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A8854A1251AD0CB007DA7FB /* PostError.swift */,
+			);
+			path = HelpersAndExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8854A2251AD0CB007DA7FB /* PostError.swift in Sources */,
 				2A88549B251AC806007DA7FB /* Post.swift in Sources */,
+				2A88549E251AD00A007DA7FB /* PostController.swift in Sources */,
 				2A88547D251AB84A007DA7FB /* AppDelegate.swift in Sources */,
 				2A88547F251AB84A007DA7FB /* SceneDelegate.swift in Sources */,
 			);

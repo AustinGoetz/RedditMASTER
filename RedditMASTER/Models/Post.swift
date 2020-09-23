@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct TopLevelDictionary {
+struct TopLevelDictionary: Decodable {
     let data: SecondLevelDictionary
 }
 
-struct SecondLevelDictionary {
+struct SecondLevelDictionary: Decodable {
     let children: [ThirdLevelDictionary]
 }
 
-struct ThirdLevelDictionary {
+struct ThirdLevelDictionary: Decodable {
     let data: Post
 }
 
-struct Post {
+struct Post: Decodable {
     let title: String
     let ups: Int
     let thumbnail: URL?
