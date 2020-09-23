@@ -18,6 +18,7 @@ class PostListTableViewController: UITableViewController {
         fetchPosts()
     }
     
+    // MARK: - Helper Functions/Methods
     func fetchPosts() {
         PostController.fetchPosts { (result) in
             switch result {
@@ -27,7 +28,10 @@ class PostListTableViewController: UITableViewController {
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.presentErrorToUser(localizedError: error)
+                    print(error.localizedDescription)
+                }
             }
         }
     }
@@ -42,7 +46,15 @@ class PostListTableViewController: UITableViewController {
 
         let post = posts[indexPath.row]
         cell.post = post
+        cell.delegate = self
 
         return cell
+    }
+}
+
+// MARK: - Extension
+extension PostListTableViewController: PresentErrorToUserDelegate {
+    func presentError(error: LocalizedError) {
+        self.presentErrorToUser(localizedError: error)
     }
 }

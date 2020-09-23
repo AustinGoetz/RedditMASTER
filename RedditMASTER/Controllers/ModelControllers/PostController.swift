@@ -63,6 +63,6 @@ class PostController {
             guard let data = data else { return completion(.failure(.noData)) }
             guard let thumbnailImage = UIImage(data: data) else { return completion(.failure(.unableToDecode))}
             completion(.success(thumbnailImage))
-        }
+        }.resume()
     }
 }

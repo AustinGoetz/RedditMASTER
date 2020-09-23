@@ -14,7 +14,7 @@ enum PostError: LocalizedError {
     case thrownImageError(Error)
     case unableToDecode
     
-    var errorDescription: String {
+    var errorDescription: String? {
         switch self {
         case .invalidURL:
             return "The server failed to reach the necessary URL"

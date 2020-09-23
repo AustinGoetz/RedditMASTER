@@ -7,6 +7,11 @@
 
 import UIKit
 
+// MARK: - Protocol
+protocol PresentErrorToUserDelegate: AnyObject {
+    func presentError(error: LocalizedError)
+}
+
 class PostTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
@@ -15,6 +20,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var upvoteLabel: UILabel!
     
     // MARK: - Properties
+    weak var delegate: PresentErrorToUserDelegate?
     var post: Post? {
         didSet {
             updateViews()
@@ -29,13 +35,16 @@ class PostTableViewCell: UITableViewCell {
         thumbnailImageView.image = nil
         
         PostController.fetchThumbnailFor(post: post) { (result) in
-            switch result {
-            case .success(let image):
-                DispatchQueue.main.async {
-                    self.thumbnailImageView.image = image
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let image):
+                    DispatchQueue.main.async {
+                        self.thumbnailImageView.image = image
+                    }
+                case .failure(let error):
+                    self.delegate?.presentError(error: error)
+                    print(error.localizedDescription)
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }
